@@ -1,0 +1,287 @@
+.el-button-group {
+  .el-dropdown {
+    .el-button {
+      border-left-color: #dcdfe6;
+    }
+  }
+}
+/* el-input__inner */
+.el-input__inner {
+  background-color: $input-bg;
+  border: 1px solid $input-border-color;
+  color: $text-color;
+  font-size: cw(14);
+  &::placeholder {
+    font-size: cw(14);
+    font-family: Microsoft YaHei;
+    font-weight: 400;
+    color: $text-color;
+    line-height: ch(32);
+    opacity: 0.5;
+  }
+  &:hover {
+    border-color: $input-border-hover-color;
+  }
+}
+/* el-input el-select*/
+.el-input,
+.el-select {
+  &:hover {
+    .el-input__inner {
+      border-color: $input-border-hover-color;
+    }
+  }
+  .el-input__icon {
+    color: $text-color;
+    &.el-select__caret {
+      color: $text-color;
+    }
+  }
+}
+.el-select-dropdown {
+  color: $text-color;
+  background: $popper-bg;
+  border: 1px solid $input-border-color;
+  &__item {
+    color: $text-color;
+    font-size: cw(14);
+    &.hover,
+    &:hover {
+      background: $bg-light-color;
+    }
+  }
+}
+/* el-date-picker*/
+.el-date-editor {
+  // background-color: $input-bg;
+  &.el-input__inner,
+  .el-input__inner {
+    border: 1px solid $input-border-color;
+    &:hover {
+      border-color: $input-border-hover-color;
+    }
+  }
+  .el-range-input {
+    background-color: transparent;
+    color: $text-color;
+    font-size: cw(14);
+    &::placeholder {
+      font-size: cw(14);
+      font-weight: 400;
+      color: $text-color;
+      line-height: ch(24);
+      opacity: 0.5;
+    }
+  }
+  .el-range-separator {
+    width: cw(30);
+    color: $text-color;
+  }
+  .el-range__icon {
+    color: $text-color;
+  }
+}
+.el-picker-panel {
+  &__icon-btn {
+    color: $text-btn-color;
+  }
+  .el-date-table th {
+    color: $table-text-color;
+    border-bottom-color: $input-border-color;
+  }
+  .el-date-table td.in-range div,
+  .el-date-table td.in-range div:hover,
+  .el-date-table.is-week-mode .el-date-table__row.current div,
+  .el-date-table.is-week-mode .el-date-table__row:hover div {
+    background-color: $bg-hover-color;
+  }
+  .el-date-table td.disabled div {
+    background-color: transparent;
+  }
+}
+.el-date-range-picker {
+  &__content.is-left {
+    border-right: 1px solid $input-border-color;
+  }
+}
+/* el-popper */
+.el-popper {
+  color: $text-color;
+  background: $popper-bg;
+  border: 1px solid $input-border-color;
+  &[x-placement^='bottom'] .popper__arrow {
+    border-bottom-color: $input-border-color;
+    &::after {
+      border-bottom-color: $popper-bg;
+    }
+  }
+  &[x-placement^='top'] .popper__arrow {
+    border-top-color: $input-border-color;
+    &::after {
+      border-top-color: $popper-bg;
+    }
+  }
+}
+/* form */
+.el-form {
+  .el-form-item__label {
+    color: $text-color;
+    font-size: cw(16);
+  }
+}
+
+/* el-dialog */
+.el-dialog {
+  &::after {
+    content: '';
+    position: absolute;
+    border: 2px solid #8ad6fd;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(270deg);
+    width: 30px;
+    display: block;
+    height: 30px;
+    left: -1px;
+    bottom: -1px;
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    border: 2px solid #8ad6fd;
+    border-right: 0;
+    border-bottom: 0;
+    transform: rotate(180deg);
+    width: 30px;
+    display: block;
+    height: 30px;
+    bottom: -1px;
+    right: -1px;
+  }
+  background: $dialog-gradient-bg;
+  // box-shadow: 0 0 15px #5da3a4 inset;
+  border: 2px solid rgba(5, 177, 182, 0.4);
+  border-top: none;
+
+  .el-dialog__header {
+    color: $text-color;
+    padding: 0;
+    margin-bottom: ch(12);
+    .el-dialog__title {
+      font-size: 16px;
+      font-family: Microsoft YaHei;
+      font-weight: bold;
+      color: $text-color;
+    }
+    .el-dialog__headerbtn {
+      top: 10px;
+      right: 10px;
+      .el-dialog__close {
+        color: $text-btn-color;
+        &:hover {
+          color: $text-btn-hover-color;
+        }
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 5px 10px;
+  }
+}
+
+/* el-table */
+.el-table {
+  &::before {
+    height: 0;
+  }
+  th {
+    color: $table-text-color;
+    background-color: transparent;
+    border-bottom-color: transparent;
+    font-weight: bold;
+    font-size: cw(14);
+    &.is-leaf {
+      border-bottom-color: transparent;
+    }
+  }
+  tr {
+    color: $table-text-color;
+    background-color: transparent;
+  }
+  td {
+    border-bottom: 1px dashed $text-color !important;
+  }
+  &.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: #333;
+  }
+  &.el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: $table-hover-color;
+  }
+}
+
+/* el-pagination */
+.el-pagination {
+  color: $text-color;
+  .el-pagination__total {
+    color: $text-color;
+  }
+  button:disabled {
+    color: $text-color;
+    background-color: transparent;
+    cursor: not-allowed;
+  }
+  .el-pager li {
+    color: #9fceff;
+    background: transparent;
+    &.active {
+      color: #00ffff;
+      cursor: default;
+    }
+    &.btn-quicknext,
+    &.btn-quickprev {
+      color: #9fceff;
+    }
+    &:hover {
+      color: #00ffff;
+    }
+  }
+  .btn-next,
+  .btn-prev {
+    color: #9fceff;
+    background-color: transparent;
+    &:hover {
+      color: $text-btn-hover-color;
+    }
+  }
+}
+
+.el-table {
+  &::before {
+    height: 0;
+  }
+  th {
+    color: $title-color;
+    border-bottom-color: transparent;
+    font-weight: bold;
+    font-size: calcvw(14);
+    &.is-leaf {
+      border-bottom-color: transparent;
+    }
+    &.el-table__cell {
+      background-color: rgba(10, 44, 110, 0.5);
+    }
+  }
+  tr {
+    color: $text-main-color;
+    background-color: transparent;
+  }
+  td.el-table__cell {
+    border-bottom: 1px dashed #0090ff;
+  }
+  &.el-table--striped .el-table__body tr.el-table__row--striped td {
+    background: #333;
+  }
+  &.el-table--enable-row-hover .el-table__body tr:hover > td {
+    background-color: $table-hover-color;
+  }
+}

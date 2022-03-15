@@ -1,0 +1,21 @@
+@mixin background($l, $r) {
+  background: url('~@/assets/image/icon-group.png') no-repeat;
+  background-position: $l $r;
+  background-size: cw(934) ch(1022);
+  display: inline-block;
+  vertical-align: middle;
+}
+@mixin backgroundIcon($l, $r) {
+  background: url('~@/assets/image/icon-group-1.png') no-repeat;
+  background-position: $l $r;
+  background-size: cw(658) ch(197);
+  display: inline-block;
+  vertical-align: middle;
+}
+@mixin background2($l, $r) {
+  background: url('~@/assets/image/icon-group-2.png') no-repeat;
+  background-position: $l $r;
+  background-size: cw(817) ch(533);
+  display: inline-block;
+  vertical-align: middle;
+}

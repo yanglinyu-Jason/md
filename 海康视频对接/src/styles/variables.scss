@@ -1,0 +1,83 @@
+$baseWidth: 3840 !default;
+$baseHeight: 1088 !default;
+/* $baseWidth: 1920 !default;
+$baseHeight: 1080 !default; */
+
+@function cw($px) {
+  @return ($px / $baseWidth) * 100vw;
+  /* @return $px * 1px; */
+}
+
+@function ch($px) {
+  @return ($px / $baseHeight) * 100vh;
+  /* @return $px * 1px; */
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin ellipsisMulti($number: 1) {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: $number;
+}
+
+/* 正文 */
+$title-color: #05FAF7;
+
+/* 正文 */
+$title-color: #00F7F7;
+$text-color: #23fffc;
+$text-main-color: #ffffff;
+$text-light-color: #74D1F9;
+/* 按钮 */
+$btn-primary-color: #409eff;
+$btn-primary-hover-color: #66b1ff;
+/* 文字按钮 */
+$text-btn-color: #00ffff;
+$text-btn-hover-color: #409EFF;
+$text-btn-inactive-color: #0AA8A5;
+/* 表格 */
+$table-text-color: #03FCF7;
+$table-hover-color: rgba(255, 144, 0, 0.53);
+
+/* 表单组件 */
+$input-border-color: #41B4FD;
+$input-border-hover-color: #409eff;
+$input-bg: #0c364d;
+$popper-bg: rgba(15, 81, 123, 0.9);
+
+
+
+/* 背景色 */
+// $bg-color: #000014;
+$bg-color: rgba(0, 0, 0, 0);
+$bg-kl-color: #090a44;
+$bg-hover-color: rgba(2, 36, 108, 0.5);
+$bg-light-color: #1c71ca;
+// $bg-main-color: rgba(13, 14, 45, 1);
+$bg-main-color: rgba(0, 0, 0, 0);
+$left-gradient-bg: linear-gradient(
+  90deg,
+  rgba($bg-color, 0.8),
+  rgba($bg-color, 0.7),
+  rgba($bg-color, 0.6),
+  rgba($bg-color, 0)
+);
+$right-gradient-bg: linear-gradient(
+  270deg,
+  rgba($bg-color, 0.8),
+  rgba($bg-color, 0.7),
+  rgba($bg-color, 0.6),
+  rgba($bg-color, 0)
+);
+$dialog-gradient-bg: rgba(16, 40, 59, 0.8);
+/* 侧边栏 */
+$side-panel-width: cw(400);
+$table-hover-color: rgba(0,255,255, 0.07);
+
